@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
+
+    <header>
+        <nav>
+            <p>Inventario</p>
+        </nav>
+    </header>
+    <main>
+        <div class="input-container">
+            <label for="item-input" class="label">Nuevo Item: </label>
+            <input type="text" id="item-input">
+            <input type="submit" value="Agregar" class="input-boton">
+        </div>
+        <div class="dt-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+                    <!-- rellenar con js -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
    
  <script src="src/script.js"></script>
 </body>
