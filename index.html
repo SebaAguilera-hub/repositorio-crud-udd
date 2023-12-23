@@ -17,17 +17,18 @@
         <div class="input-container">
             <label for="item-input" class="label">Nuevo Item: </label>
             <input type="text" id="item-input">
-            <input type="submit" value="Agregar" class="input-boton">
+            <input type="submit" value="Agregar" class="input-boton" onclick="addData()">
         </div>
         <div class="dt-container">
-            <table>
+    <!-- tabla -->
+            <table id="dataTable">
                 <thead>
                     <tr>
                         <th>Item</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
-                <tbody id="tableData">
+                <tbody>
                     <!-- rellenar con js -->
                 </tbody>
             </table>

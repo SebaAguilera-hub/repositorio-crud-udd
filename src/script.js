@@ -26,6 +26,8 @@ function addData(){
         localStorage.setItem("listaItem", JSON.stringify(listaItem))
         //mostrar data
         showData();
+        //limpia el input para dejarlo sin texto 
+        document.getElementById("item-input").value="";
         limpiarData();
     }
 }
@@ -40,18 +42,19 @@ function showData(){
     }
 
     let html = "";
-    listaItem.array.forEach(function(element, index){
+    listaItem.forEach(function(element, index){
         html += "<tr>";
         html += "<td>" + element.item + "</td>";
-        html += '<td><button onclick="updateData(' + index + ')" class="btn btn-warning">Editar Dato</button> <button onclick="deleteData(' + index + ')" class="btn btn-danger" id="btnDelete">Eliminar Dato</button></td>';
+        html += '<td><button onclick="updateData(' + index + ')" class="opcion btn btn-warning">Editar Dato</button> <button onclick="deleteData(' + index + ')" class="opcion btn btn-danger" id="btnDelete">Eliminar Dato</button></td>';
         html += "</tr>";
+
     });
 
-    document.querySelector('#tableData tbody').innerHTML = html;
+    document.querySelector('#dataTable tbody').innerHTML = html;
 }
 //crear
 document.onload = showData();
 
-function deleteData(index){
-   let listItem;
-}
+// function deleteData(index){
+//    let listItem;
+// }
