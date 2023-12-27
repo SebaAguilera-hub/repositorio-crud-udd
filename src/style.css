@@ -9,6 +9,19 @@
 
 body{
     font-family: "Poppins",sans-serif;
+    background-color: rgb(207, 206, 206);
+}
+
+
+.tabla-container:hover{
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.75);
+    transition: 0.8s;
+}
+
+.tabla-container{
+    border: 1px solid rgb(167, 156, 156);
+    transition: 0.8s;
+    position: relative;
 }
 
 header{
@@ -25,12 +38,12 @@ header{
 header nav{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
 }
 
 header nav p{
-    margin-left: 80px;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -48,7 +61,8 @@ main{
 .input-container{
     display: flex;
     align-items: center;
-    width: 500px;
+    justify-content: center;
+    width: 900px;
     height: 4rem;
     padding: 10px;
     background-color: lightskyblue;
@@ -59,15 +73,30 @@ main{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#item-input{
+#item-input, #id-input{
+    margin-left: 0.5rem;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    border: 0.5px solid;
+    margin-right: 0.5rem;
+}
+
+#id-input{
+    width: 50px;
+}
+
+#stock-input{
     margin-left: 0.5rem;
     outline: none;
     padding: 0.5rem;
     border-radius: 0.8rem;
     border: none;
+    width: 60px;
+    border: 0.5px solid;
 }
 
-.input-boton{
+.input-boton, .input-editar{
     margin-left: 1rem;
     width: 6rem;
     height: 30px;
@@ -75,26 +104,46 @@ main{
 
 }
 
+/* Boton editar */
+.input-editar{
+    display: none;
+}
+
+
 .dt-container{
+    position: relative;
     display: flex;
     justify-content: center;
-    width: 500px;
+    width: 900px;
     background-color: blanchedalmond;
 }
 
 .dt-container table{
     border-collapse: separate;
     border-spacing: 10px;
+    width: 100%;
+    margin-left: 130px;
 }
+
+
 
 table td{
     padding: 0 10px;
+    text-align: center;
 }
 
 .opcion{
     width: 90px;
     height: 30px;
+    cursor: pointer;
 }
-
-
+/* Activar el display a block */
+.block{
+    display: none;
+    position: absolute;
+    background-color: rgba(10, 10, 10, 0.527);
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+}
 

@@ -13,25 +13,43 @@
             <p>Inventario</p>
         </nav>
     </header>
-    <main>
-        <div class="input-container">
-            <label for="item-input" class="label">Nuevo Item: </label>
-            <input type="text" id="item-input">
-            <input type="submit" value="Agregar" class="input-boton" onclick="addData()">
-        </div>
-        <div class="dt-container">
-    <!-- tabla -->
-            <table id="dataTable">
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Opciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- rellenar con js -->
-                </tbody>
-            </table>
+    <main>  
+        <div class="tabla-container">
+            <div class="input-container">
+                <!-- Inputs -->
+                <!-- ID -->
+                <label for="id-input" class="label">ID </label>
+                <input type="text" id="id-input">
+                <!-- Item -->
+                <label for="item-input" class="label">Item </label>
+                <input type="text" id="item-input">
+                <!-- Stock -->
+                <label for="stock-input" class="label">Stock </label>
+                <input type="number" id="stock-input" min="0">
+    
+    
+                <!-- agregar y actualizar -->
+                <input type="submit" value="Agregar" class="input-boton" id="btnAdd" onclick="addData()">
+                <input type="submit" value="Aceptar" class="input-editar" id="btnUpdate">
+            </div>
+            <!-- tabla -->
+            <div class="dt-container">
+                <div class="block">
+                </div>
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Item</th>
+                            <th>Stock</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- rellenar con js -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
 
