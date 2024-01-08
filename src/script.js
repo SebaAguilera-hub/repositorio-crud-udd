@@ -55,7 +55,7 @@ function showData(){
         html += "<td>" + element.id + "</td>"
         html += "<td>" + element.item + "</td>";
         html += "<td>" + element.stock + "</td>";
-        html += '<td><button onclick="updateData(' + index + ')" class="opcion btn btn-warning">Editar Dato</button> <button onclick="deleteData(' + index + ')" class="opcion btn btn-danger" id="btnDelete">Eliminar Dato</button></td>';
+        html += '<td><button onclick="updateData(' + index + ')" class="opcion">Editar Dato</button> <button onclick="deleteData(' + index + ')" class="opcion" id="btnDelete">Eliminar Dato</button></td>';
         html += "</tr>";
 
     });
